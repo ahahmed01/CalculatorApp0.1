@@ -33,13 +33,14 @@ function clicked(elem){
         find_answer();
         new_answer = true;
     }
-    else if (new_answer == true){
+    else if (new_answer == true && !elem.className.includes("function")){
         output.textContent = "";
         output.textContent += symbol;
         new_answer = false;
     }
     else{
         output.textContent += symbol;
+        new_answer = false;
     }
     
 }
